@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Average Travel Distance",
+    "selection": {
+      "Transport_highlight": {
+        "type": "multi",
+        "fields": ["mode"],
+        "bind": "legend"
+      }
+    },
+    "width": 500,
+    "height": 200,
+    "transform": [{"filter": "datum.year > 2009"}],
+    "data": {"url": "https://raw.githubusercontent.com/dtwjy/Assignment2/main/public-transport-utilisation-average-trip-distance.csv"},
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "encoding": {
+      "x": {"field": "year", "title": "Year"},
+      "y": {"field": "ave_distance_per_trip", "type": "quantitative",  "title": "Average Distance (Km)"},
+      "color": {"field": "mode", "type": "nominal"},
+      "opacity": {
+        "condition": {"selection": "Transport_highlight", "value": 1},
+        "value": 0.2
+      },
+      "tooltip": [
+        {
+          "field": "mode",
+          "type": "nominal",
+          "title": "Mode of Transport"
+        },
+        {
+          "field": "ave_distance_per_trip",
+          "type": "nominal",
+          "title": "Average Distance (km)",
+        }
+      ],
+    }
+  }

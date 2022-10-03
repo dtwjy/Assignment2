@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Singapore's Public Transport Usage",
+    "transform": [{"filter": "datum.year > 2010"}],
+    "selection": {
+      "Transport_highlight": {
+        "type": "multi",
+        "fields": ["type_of_public_transport"],
+        "bind": "legend"
+      }
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/dtwjy/Assignment2/main/public-transport-utilisation-average-public-transport-ridership.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "year", "title": "Year"},
+      "y": {
+        "field": "average_ridership",
+        "type": "quantitative",
+        "title": "Average Riders",
+      },
+      "xOffset": {"field": "type_of_public_transport"},
+      "color": {"field": "type_of_public_transport",
+      "title": "Mode of Transport"},
+      "tooltip": [
+        {
+          "field": "type_of_public_transport",
+          "type": "nominal",
+          "title": "Mode of Transport"
+        },
+        {
+          "field": "average_ridership",
+          "type": "nominal",
+          "title": "Average Riders",
+          "format": ".2s"
+        }
+      ],
+      "opacity": {
+        "condition": {"selection": "Transport_highlight", "value": 1},
+        "value": 0.2
+      }
+    }
+  }
