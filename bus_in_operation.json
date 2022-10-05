@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 300,
+    "width": "container",
     "height": 200,
     "title": {
       "text": "Bus Route vs Average Fleet in Operation ('0)",

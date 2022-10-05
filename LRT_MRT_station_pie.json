@@ -1,6 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Railway Stations",
+    "width":"container",
     "transform": [{"filter": "datum.year > 2015"}],
     "data": {
       "url": "https://raw.githubusercontent.com/dtwjy/Assignment2/main/number-of-mrt-and-lrt-stations.csv"
@@ -10,7 +11,9 @@
         "mark": {"type": "arc", "innerRadius": 50},
         "encoding": {
           "theta": {"field": "stations", "type": "quantitative"},
-          "color": {"field": "mode", "type": "nominal", "title": "Mode"},
+          "color": {"field": "mode", "type": "nominal", "title": "Mode", "scale": {
+            "domain": ["MRT", "LRT"],
+            "range": ["#ff7f00", "purple"]}},
           "tooltip": [
           {
             "field": "mode",
@@ -20,7 +23,7 @@
           {
             "field": "stations",
             "type": "nominal",
-            "title": "No. Stations",
+            "title": "No. Stations"
           }
         ]
         }
@@ -37,5 +40,12 @@
           "text": {"value": "Stations"}
         }
       }
-    ]
+    ],
+    "config": {
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      }
+    }
   }

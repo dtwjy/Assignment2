@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height": 450,
   "title": "MRT and LRT Stations",
+  "width":840,
+  "height": 350,
   "projection": {"type": "mercator"},
   "data": {
         "url": "https://raw.githubusercontent.com/dtwjy/Homework_Week9/main/mrt_lrt_data.csv"
@@ -46,12 +46,13 @@
         "color": {
           "field": "type",
           "type": "ordinal",
+          "legend": null,
           "scale": {
             "domain": [
               "MRT",
               "LRT"
             ],
-            "range": ["#984ea3", "#377eb8"]
+            "range": ["#ff7f00", "purple"]
           }
         },
         "opacity": {"value": 1},
