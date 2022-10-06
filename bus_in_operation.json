@@ -48,5 +48,13 @@
           ]
         }
       }
-    ]
+    ],
+    "config": {
+      "background":"#fbf9f0",
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      }
+    }
   }

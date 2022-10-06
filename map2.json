@@ -52,7 +52,7 @@
               "MRT",
               "LRT"
             ],
-            "range": ["#ff7f00", "purple"]
+            "range": ["#60997d", "#C2B280"]
           }
         },
         "opacity": {"value": 1},
@@ -67,5 +67,13 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "background":"lightskyblue",
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  }
 }

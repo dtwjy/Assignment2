@@ -47,7 +47,7 @@
     "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "darkgray"}
   },
     {
-      "mark": {"type": "circle", "size": 5, "fill": "darkred"},
+      "mark": {"type": "circle", "size": 5, "fill": "#1D5171"},
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
         "latitude": {"field": "Latitude", "type": "quantitative"},
@@ -63,5 +63,13 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "background":"lightskyblue",
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  }
 }

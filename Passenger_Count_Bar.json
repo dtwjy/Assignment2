@@ -17,7 +17,8 @@
     }
   ],
   "transform": [
-    {"filter": "datum.year > 2009"},
+    {"filter": "datum.year >= 2004"},
+    {"filter": "datum.year < 2015"},
     {
       "filter": "transportation_selection == null || datum.type_of_public_transport == transportation_selection"
     }
@@ -35,9 +36,8 @@
       "field": "type_of_public_transport",
       "scale": {
         "domain": ["Bus", "LRT", "MRT", "Taxi"],
-        "range": ["darkred", "purple", "orange", "lightblue"]
+        "range": ["#1D5171", "#C2B280", "#60997d", "#15B2D1"]
       },
-      "legend":null,
       "title": "Type"
     },
     "tooltip": [
@@ -53,5 +53,13 @@
         "format": ".2s"
       }
     ]
+  },
+  "config": {
+    "background":"#fbf9f0",
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
   }
 }

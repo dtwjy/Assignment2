@@ -13,7 +13,7 @@
           "theta": {"field": "stations", "type": "quantitative"},
           "color": {"field": "mode", "type": "nominal", "title": "Mode", "scale": {
             "domain": ["MRT", "LRT"],
-            "range": ["#ff7f00", "purple"]}},
+            "range": ["#60997d", "#C2B280"]}},
           "tooltip": [
           {
             "field": "mode",
@@ -42,6 +42,7 @@
       }
     ],
     "config": {
+      "background":"#eddfc9",
       "style": {
         "cell": {
           "stroke": "transparent"
